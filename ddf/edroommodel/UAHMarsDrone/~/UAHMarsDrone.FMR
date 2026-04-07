@@ -60,7 +60,7 @@ EDROOMTarget
 [Version]
 2
 DUMMY_MESCC_Lib
-4
+3
 [ActorDeployment]
 [Version]
 1
@@ -92,20 +92,8 @@ Timer
 [ActorDeployment]
 [Version]
 1
-TCManager
-2
-10
-EDROOMprioNormal
- 
-CCTCManager
-UAHMarsDrone
-[EventsDeployment]
-0
-[ActorDeployment]
-[Version]
-1
 DroneMng
-3
+2
 10
 EDROOMprioNormal
  
@@ -117,7 +105,7 @@ UAHMarsDrone
 [Version]
 1
 HK_FDIRMn
-4
+3
 10
 EDROOMprioNormal
  

@@ -62,7 +62,7 @@ CPDroneMngCtrl
 Top
 NULL
 [Subestados]
-1
+4
 [Version SubEstados]
 3
 I
@@ -78,14 +78,76 @@ I
 0
 73 73 55 55
 [FinObjetoGrafico]
+SelfTest
+;
+;
+;
+;
+;
+1
+0
+[ObjetoGrafico]
+[Version Objeto Grafico]
+0
+189 146 93 62
+[FinObjetoGrafico]
+Ready
+;
+;
+;
+;
+;
+1
+0
+[ObjetoGrafico]
+[Version Objeto Grafico]
+0
+189 289 127 97
+[FinObjetoGrafico]
+FlyPlan
+;
+;
+;
+;
+;
+1
+0
+[ObjetoGrafico]
+[Version Objeto Grafico]
+0
+104 522 438 86
+[FinObjetoGrafico]
 [PuntosEleccion]
 0
 [Version PuntosEleccion]
 2
 [Transiciones]
-0
+1
 [Version Transicion]
 5
+Transicion0
+I
+OSubEstI
+SelfTest
+DSubEst
+;
+[Trigger]
+
+
+true
+ 
+ 
+ 
+;
+;
+;
+0
+;
+[GraficoTransicion]
+[Version GraficoTransicion]
+0
+119 119 189 156 0
+[FinGraficoTransicion]
 [VariablesConstantes]
 0
 [Metodos]
