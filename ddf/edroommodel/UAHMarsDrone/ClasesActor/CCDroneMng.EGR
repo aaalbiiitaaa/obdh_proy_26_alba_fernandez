@@ -20,7 +20,7 @@ NULL
 1
 [FinStack]
 [Puertos]
-1
+2
 [Version Puerto]
 0
 DroneMngCtrl
@@ -32,6 +32,17 @@ DroneMngCtrl
 4
 28
 CPDroneMngCtrl
+[Version Puerto]
+0
+DroneTimer
+0
+1
+1
+[Version Grafico Puerto]
+0
+46
+41
+EDROOMTimingSAP
 [FinPuertos]
 [ActoresComponente]
 0
@@ -40,7 +51,7 @@ CPDroneMngCtrl
 0
 [FinUniones]
 [NumTimers]
-0
+2
 [FinNumTimers]
 [NumMsgDef]
 10
@@ -55,7 +66,12 @@ CPDroneMngCtrl
 [Modulos]
 0
 [Eventos]
-0
+1
+[Event]
+[Version]
+1
+EvTimerDroneTimer
+Timer
 [Maquina de Estados]
 [Version Maquina de Estados]
 1
@@ -142,10 +158,10 @@ ExecTC
 [Version Ramas]
 5
 InitFlightPlan
-true
+GExecFlightPlan()
 FlyPlan
 DSubEst
-;
+FInitFlightPlan();
 
  
 
@@ -182,10 +198,10 @@ CtrlAlorithm
 [Version Ramas]
 5
 PlanDone
-true
+GFlightPlanDone()
 Ready
 DSubEst
-;
+FToReady();
 
  
 
@@ -202,7 +218,7 @@ ProgNextCtrl
 true
 FlyPlan
 DSubEst
-;
+FProgNextCtrl();
 
  
 
@@ -314,7 +330,7 @@ true
 [VariablesConstantes]
 0
 [Metodos]
-4
+9
 [Version Metodos]
 21
 BasicAction
@@ -386,6 +402,79 @@ Msg->reply
 DroneMngCtrl
 SdroneReady
 NULL
+EDROOMprioVeryHigh
+BasicAction
+FToReady()
+0
+0
+0
+0
+1
+
+0
+Guard
+GFlightPlanDone()
+0
+0
+0
+0
+1
+
+3
+bool GFlightPlanDone(){
+return pus_service129_flight_plan_done();
+}
+Guard
+GExecFlightPlan()
+0
+0
+0
+0
+1
+
+3
+bool GExecFlightPlan(){
+return pus_service129_flight_plan_ready();
+}
+Inform
+FInitFlightPlan()
+0
+0
+0
+0
+1
+
+5
+	 
+	//Timing Service useful methods
+	 
+	//time.GetTime(); // Get current monotonic time
+	//time.Add(X,Y); // Add X sec + Y microsec
+[ServiceRequest]
+InformAt
+DroneTimer
+EDROOMSignalTimeout
+
+EDROOMprioVeryHigh
+Inform
+FProgNextCtrl()
+0
+0
+0
+0
+1
+
+5
+	 
+	//Timing Service useful methods
+	 
+	//time.GetTime(); // Get current monotonic time
+	//time.Add(X,Y); // Add X sec + Y microsec
+[ServiceRequest]
+InformAt
+DroneTimer
+EDROOMSignalTimeout
+
 EDROOMprioVeryHigh
 [MaquinasSubEstados]
 0
