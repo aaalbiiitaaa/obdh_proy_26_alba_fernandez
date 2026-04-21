@@ -109,7 +109,7 @@ TEDROOMSignal CEDROOMSystemCommSAP::C3DroneMng_PDroneMngCtrl__C2DroneMngTester_P
  
 	switch(signalOut){
  
-		case( CCDroneMng::SdroneReady):	 signalIn=CCDroneMngTester::SdroneReady; break;
+		case( CCDroneMng::SDroneReady):	 signalIn=CCDroneMngTester::SDroneReady; break;
  
 		default: signalIn=(TEDROOMSignal)(-1); break;
  

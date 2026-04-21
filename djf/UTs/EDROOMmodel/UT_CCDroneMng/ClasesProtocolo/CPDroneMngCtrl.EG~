@@ -4,7 +4,7 @@
 0
 0
 0
-0
+1
 2
 [Version Mensaje]
 1
@@ -35,7 +35,7 @@ v1
 1
 [Version Senal]
 0
-SdroneReady
+SDroneReady
 [Version Dato]
 1
 NULL

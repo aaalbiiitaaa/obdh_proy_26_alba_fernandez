@@ -38,7 +38,7 @@ public:
 							EDROOMSignalDestroy, 
 							SDroneSetUp, 
 							SDroneTC, 
-							SdroneReady };
+							SDroneReady };
 
 	/**
 	 * \class CCDroneMng::CEDROOMMemory
@@ -177,7 +177,7 @@ public:
 		EDROOMSignalDestroy,
 		SDroneSetUp,
 		SDroneTC,
-		SdroneReady };
+		SDroneReady };
 
 
 		friend class CCDroneMng;
