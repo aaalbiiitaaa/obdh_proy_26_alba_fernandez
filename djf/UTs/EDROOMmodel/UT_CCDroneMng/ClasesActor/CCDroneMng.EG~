@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-1
-1
+0
+0
 0
 [Estructura]
 [Version Estructura]
@@ -170,9 +170,9 @@ GExecFlightPlan()
 FlyPlan
 DSubEst
 FInitFlightPlan();
+
  
- 
- 
+
 ;
 ;
 ;
@@ -187,9 +187,9 @@ true
 Ready
 DSubEst
 ;
+
  
- 
- 
+
 ;
 ;
 ;
@@ -210,9 +210,9 @@ GFlightPlanDone()
 Ready
 DSubEst
 FToReady();
+
  
- 
- 
+
 ;
 ;
 ;
@@ -227,9 +227,9 @@ true
 FlyPlan
 DSubEst
 FProgNextCtrl();
+
  
- 
- 
+
 ;
 ;
 ;
@@ -367,7 +367,11 @@ FExecDroneTC()
 0
 1
  
-6
+10
+	
+		// Data access
+	
+	// ... =varSDroneTC;
 	
 		// Data access
 	
@@ -435,7 +439,7 @@ pus_service129_init_flight_plan();
 InformAt
 DroneTimer
 EDROOMSignalTimeout
-NULL
+CDDroneConfig
 EDROOMprioVeryHigh
 Inform
 FProgNextCtrl()
@@ -457,7 +461,7 @@ time=VNextCtrl;
 InformAt
 DroneTimer
 EDROOMSignalTimeout
-NULL
+CDDroneConfig
 EDROOMprioVeryHigh
 ReplyMsg
 FReplayDroneReady()
