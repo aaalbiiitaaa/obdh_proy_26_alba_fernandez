@@ -159,7 +159,7 @@ void	CCDroneMng::EDROOM_CTX_Top_0::FReplayDroneReady()
 
 pus_service129_drone_ready();
    //Reply synchronous communication
-   Msg->reply(SdroneReady); 
+   Msg->reply(SDroneReady); 
 }
 
 
