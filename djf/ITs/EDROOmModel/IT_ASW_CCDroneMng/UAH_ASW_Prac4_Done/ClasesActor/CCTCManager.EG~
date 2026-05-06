@@ -5,7 +5,7 @@
 0
 0
 [Modificado]
-1
+0
 1
 0
 [Estructura]
@@ -672,7 +672,11 @@ FFwdDroneTC()
 0
 1
 
-2
+6
+	
+		// Complete Data 
+	
+	*pSDroneTC_Data=VCurrentTC;
 	
 
 [ServiceRequest]
