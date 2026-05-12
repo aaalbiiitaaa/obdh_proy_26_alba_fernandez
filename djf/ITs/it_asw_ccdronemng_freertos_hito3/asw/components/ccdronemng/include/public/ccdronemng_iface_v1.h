@@ -211,6 +211,7 @@ public:
 			CtrlAlorithm,
 			CtrlAlorithm_PlanDone,
 			CtrlAlorithm_ProgNextCtrl,
+			ExecTCInFlight,
 			EDROOMMemoryTrans };
 
 

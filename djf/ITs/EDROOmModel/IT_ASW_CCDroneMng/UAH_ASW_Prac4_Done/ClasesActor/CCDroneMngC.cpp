@@ -317,6 +317,13 @@ void CCDroneMng::EDROOM_SUB_Top_0::EDROOMBehaviour()
 					edroomNextState = FlyPlan;
 				 } 
 				break;
+			//Next Transition is ExecTCInFlight
+			case (ExecTCInFlight):
+				//Msg->Data Handling 
+				FExecDroneTC();
+				//Next State is FlyPlan
+				edroomNextState = FlyPlan;
+				break;
 		}
 
 		//Entry into the Next State 
@@ -527,6 +534,19 @@ TEDROOMTransId CCDroneMng::EDROOM_SUB_Top_0::EDROOMFlyPlanArrival()
 					//Next transition is  CtrlAlorithm
 					edroomCurrentTrans.localId = CtrlAlorithm;
 					edroomCurrentTrans.distanceToContext = 0 ;
+					edroomValidMsg=true;
+				 }
+
+				break;
+
+			case (SDroneTC): 
+
+				 if (*Msg->GetPInterface() == DroneMngCtrl)
+				{
+
+					//Next transition is  ExecTCInFlight
+					edroomCurrentTrans.localId= ExecTCInFlight;
+					edroomCurrentTrans.distanceToContext = 0;
 					edroomValidMsg=true;
 				 }
 
