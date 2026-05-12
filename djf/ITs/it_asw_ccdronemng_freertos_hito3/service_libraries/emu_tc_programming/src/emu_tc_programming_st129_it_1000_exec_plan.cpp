@@ -47,23 +47,23 @@
 
 //TODO 15 Part 2 Execute the Functional Test and compare with the expected output
 
-#define IT_UAH_DRONE_EXEC_PLAN_1000
-
-#ifdef IT_UAH_DRONE_EXEC_PLAN_1000
-
-#define IT_1000_TIME_step0 (OBT_AFTER_POWER_ON + 3)
-#define IT_1000_TIME_step1 (OBT_AFTER_POWER_ON + 4)
-
-
-
-EmuGSS_TCProgram129_1 prog_IT_1000_step_0(IT_1000_TIME_step0,
-		"IT_UAH_DRONE_1000 step 1, Set Flight Plan x=100.5, y=50.5, z=15.5",100.5,50.5,15.5);
-
-EmuGSS_TCProgram129_3 prog_IT_1000_step_1(IT_1000_TIME_step1,
-		"IT_UAH_DRONE_1000 step 2, Exec Flight Plan");
-
-
-#endif
+//#define IT_UAH_DRONE_EXEC_PLAN_1000
+//
+//#ifdef IT_UAH_DRONE_EXEC_PLAN_1000
+//
+//#define IT_1000_TIME_step0 (OBT_AFTER_POWER_ON + 3)
+//#define IT_1000_TIME_step1 (OBT_AFTER_POWER_ON + 4)
+//
+//
+//
+//EmuGSS_TCProgram129_1 prog_IT_1000_step_0(IT_1000_TIME_step0,
+//		"IT_UAH_DRONE_1000 step 1, Set Flight Plan x=100.5, y=50.5, z=15.5",100.5,50.5,15.5);
+//
+//EmuGSS_TCProgram129_3 prog_IT_1000_step_1(IT_1000_TIME_step1,
+//		"IT_UAH_DRONE_1000 step 2, Exec Flight Plan");
+//
+//
+//#endif
 
 
 
