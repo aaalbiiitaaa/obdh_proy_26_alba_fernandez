@@ -1,0 +1,54 @@
+Real_Time_Situation (
+   Generation_Tool    => "MAST Schedulability Analysis, version 1.7.0.0",
+   Generation_Profile => "C:\Users\aaalb\Documents\mast-bin-win-1-7-0-0\mast_analysis.exe default C:\Users\aaalb\Documents\mast-bin-win-1-7-0-0\mast\asw0\ASW0 C:\Users\aaalb\Documents\mast-bin-win-1-7-0-0\mast\asw0\ASW0.out",
+   Generation_Date    => 2026-05-18T18:34:18);
+
+Transaction (
+   Name     => trans_newrejectedtc,
+   Results  => 
+       ((Type                          => Timing_Result,
+         Event_Name                    => eventoirq18bottomhalfsignal,
+         Num_Of_Suspensions            => 0,
+         Worst_Blocking_Time           => 0.000,
+         Worst_Global_Response_Times   => 
+            ((Referenced_Event => evnewrejectedtc,
+              Time_Value       => 0.001012)),
+         Best_Global_Response_Times    => 
+            ((Referenced_Event => evnewrejectedtc,
+              Time_Value       => 1.002E-04)),
+         Jitters                       => 
+            ((Referenced_Event => evnewrejectedtc,
+              Time_Value       => 9.118E-04))),
+        (Type                          => Timing_Result,
+         Event_Name                    => eventorxtcedroomirqsignal,
+         Num_Of_Suspensions            => 0,
+         Worst_Blocking_Time           => 0.000,
+         Worst_Global_Response_Times   => 
+            ((Referenced_Event => evnewrejectedtc,
+              Time_Value       => 0.002042)),
+         Best_Global_Response_Times    => 
+            ((Referenced_Event => evnewrejectedtc,
+              Time_Value       => 2.022E-04)),
+         Jitters                       => 
+            ((Referenced_Event => evnewrejectedtc,
+              Time_Value       => 0.001840))),
+        (Type                          => Timing_Result,
+         Event_Name                    => "deadline",
+         Num_Of_Suspensions            => 0,
+         Worst_Blocking_Time           => 0.000,
+         Worst_Global_Response_Times   => 
+            ((Referenced_Event => evnewrejectedtc,
+              Time_Value       => 0.014082)),
+         Best_Global_Response_Times    => 
+            ((Referenced_Event => evnewrejectedtc,
+              Time_Value       => 0.001404)),
+         Jitters                       => 
+            ((Referenced_Event => evnewrejectedtc,
+              Time_Value       => 0.012678)))));
+
+Processing_Resource (
+   Name     => leon3,
+   Results  => 
+       ((Type   => Utilization,
+         Total  => 1.50%)));
+
